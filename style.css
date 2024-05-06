@@ -23,3 +23,18 @@ body{
 		#fc020f
 	);
 }
+
+
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+    #clock {
+        font-size: 1.5em;
+    }
+}
+
+/* Media query for larger screens */
+@media only screen and (min-width: 1200px) {
+    #clock {
+        font-size: 3em;
+    }
