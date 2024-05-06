@@ -1,7 +1,7 @@
 body{
     
     background: linear-gradient( 
-		105deg, 
+		155deg, 
 		#02fcd2, 
 		#a8fcff
 	);
@@ -36,6 +36,6 @@ body{
 /* Media query for larger screens */
 @media only screen and (min-width: 1200px) {
     #clock {
-        font-size: 3em;
+        font-size: 10em;
     }
 }
