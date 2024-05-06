@@ -1,0 +1,25 @@
+body{
+    
+    background: linear-gradient( 
+		105deg, 
+		#02fcd2, 
+		#a8fcff
+	);
+}
+
+
+
+#clock {
+	font-size: 175px;
+	width: 900px;
+	margin: 200px;
+	text-align: center;
+	border: 5px solid rgb(8, 8, 8);
+	border-radius: 20px;
+    color: yellow;
+    background: linear-gradient( 
+		155deg, 
+		#fa00a7, 
+		#fc020f
+	);
+}
