@@ -1,29 +1,57 @@
 body{
     
-    background: linear-gradient( 
-		155deg, 
-		#02fcd2, 
-		#a8fcff
-	);
+    background: cadetblue
 }
 
 
 
 #clock {
-	font-size: 175px;
+	font-size: 75px;
 	width: 900px;
 	margin: 200px;
 	text-align: center;
-	border: 5px solid rgb(8, 8, 8);
+	border: 1px solid rgb(8, 8, 8);
 	border-radius: 20px;
     color: yellow;
     background: linear-gradient( 
-		155deg, 
+		135deg, 
 		#fa00a7, 
 		#fc020f
 	);
 }
 
+#date {
+	
+	margin: 200px;
+	font-size: 55px;
+	width: 900px;
+	text-align: center;
+	border: 1px solid rgb(8, 8, 8);
+	border-radius: 20px;
+    color: rgb(25, 0, 255);
+    background: linear-gradient( 
+		135deg, 
+		#e906fd, 
+		#fc02c6
+	);
+  }
+  
+  #weather{
+
+	margin: 200px;
+	font-size: 5px;
+	width: 900px;
+	text-align: center;
+	border: 1px solid rgb(8, 8, 8);
+	border-radius: 20px;
+    color: rgb(8, 8, 8);
+    background: linear-gradient( 
+		135deg, 
+		#fad400, 
+		#a85405
+	);
+
+  }
 
 
 /* Media query for smaller screens */
@@ -31,11 +59,24 @@ body{
     #clock {
         font-size: 1.5em;
     }
+
+	#date{
+		font-size: 1.5rem;
+	}
 }
 
 /* Media query for larger screens */
 @media only screen and (min-width: 1200px) {
     #clock {
-        font-size: 10em;
+        font-size: 5rem;
     }
+
+
+	#date{
+		font-size: 5rem;
+	}
+
+	#weather{
+		font-size: 3rem;
+	}
 }
