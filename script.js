@@ -91,10 +91,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var bmi = weight / (height * height);
 
     var resultDiv = document.getElementById('result');
-    resultDiv.innerHTML = 'Your BMI is: ' + bmi.toFixed(2);
+    resultDiv.innerHTML = 'Your BMI is: ' + bmi.toFixed(4);
 }
-
-
 
 
 
