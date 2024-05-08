@@ -79,3 +79,109 @@ document.addEventListener('DOMContentLoaded', function() {
     console.error('Error getting geolocation:', error);
     document.getElementById('weather').innerHTML = 'Unable to determine location';
   });
+
+
+
+
+
+  function calculateBMI() {
+    var weight = parseFloat(document.getElementById('weight').value);
+    var height = parseFloat(document.getElementById('height').value);
+
+    var bmi = weight / (height * height);
+
+    var resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = 'Your BMI is: ' + bmi.toFixed(2);
+}
+
+
+
+
+
+
+
+// Stopwatch
+var stopwatchInterval;
+var stopwatchTime = 0;
+var stopwatchRunning = false;
+
+function startStopwatch() {
+    if (!stopwatchRunning) {
+        stopwatchInterval = setInterval(updateStopwatch, 1000);
+        stopwatchRunning = true;
+    }
+}
+
+function stopStopwatch() {
+    clearInterval(stopwatchInterval);
+    stopwatchRunning = false;
+}
+
+function resetStopwatch() {
+    clearInterval(stopwatchInterval);
+    stopwatchRunning = false;
+    stopwatchTime = 0;
+    document.getElementById('stopwatchDisplay').textContent = '00:00:00';
+}
+
+function updateStopwatch() {
+    stopwatchTime++;
+    var hours = Math.floor(stopwatchTime / 3600);
+    var minutes = Math.floor((stopwatchTime % 3600) / 60);
+    var seconds = stopwatchTime % 60;
+
+    var display = 
+        (hours < 10 ? '0' : '') + hours + ':' +
+        (minutes < 10 ? '0' : '') + minutes + ':' +
+        (seconds < 10 ? '0' : '') + seconds;
+
+    document.getElementById('stopwatchDisplay').textContent = display;
+}
+
+// Timer
+var timerInterval;
+var timerTime = 0;
+var timerRunning = false;
+
+function startTimer() {
+    if (!timerRunning) {
+        timerTime = parseInt(document.getElementById('timerInput').value);
+        if (timerTime <= 0) {
+            alert('Please enter a valid time.');
+            return;
+        }
+        timerInterval = setInterval(updateTimer, 1000);
+        timerRunning = true;
+    }
+}
+
+function stopTimer() {
+    clearInterval(timerInterval);
+    timerRunning = false;
+}
+
+function resetTimer() {
+    clearInterval(timerInterval);
+    timerRunning = false;
+    timerTime = 0;
+    document.getElementById('timerInput').value = '60';
+    document.getElementById('timerDisplay').textContent = '01:00';
+}
+
+function updateTimer() {
+    timerTime--;
+    if (timerTime <= 0) {
+        clearInterval(timerInterval);
+        timerRunning = false;
+        alert('Timer has ended!');
+    }
+
+    var minutes = Math.floor(timerTime / 60);
+    var seconds = timerTime % 60;
+
+    var display = 
+        (minutes < 10 ? '0' : '') + minutes + ':' +
+        (seconds < 10 ? '0' : '') + seconds;
+
+    document.getElementById('timerDisplay').textContent = display;
+}

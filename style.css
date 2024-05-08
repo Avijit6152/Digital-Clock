@@ -1,8 +1,6 @@
-body{
-    
-    background: cadetblue
+body {
+	background-color: rgb(44, 197, 189);
 }
-
 
 
 #clock {
@@ -54,6 +52,75 @@ body{
   }
 
 
+  #container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+}
+
+.utility-section {
+	background-color: #fd0395;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	width: 300px;
+}
+
+h2 {
+	margin-top: 0;
+	color: #333;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+	color: #070707;
+}
+
+input {
+	margin-top: 10px;
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 10px;
+	border: 1px solid #0a0a0a;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+button {
+	margin-top: 30px;
+	width: 100%;
+	padding: 10px;
+	background-color: #03850a;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+button:hover {
+	background-color: #0a0a0a;
+}
+
+#result, #stopwatchDisplay, #timerDisplay {
+	margin: 30px;
+	color: #333;
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+}
+ 
+.stop{
+
+	background-color: red;
+}
+
+.reset{
+	background-color: rgb(25, 0, 255);
+}
+
 /* Media query for smaller screens */
 @media only screen and (max-width: 600px) {
     #clock {
@@ -63,6 +130,14 @@ body{
 	#date{
 		font-size: 1.5rem;
 	}
+
+	#weather{
+		font-size: 1.5rem;
+	}
+	
+	.utility-section {
+			width: calc(100% - 40px);
+		}
 }
 
 /* Media query for larger screens */
