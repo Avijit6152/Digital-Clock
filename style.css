@@ -122,44 +122,42 @@ button:hover {
 	background-color: rgb(25, 0, 255);
 }
 
-/* Media query for smaller screens */
-@media only screen and (max-width: 200px) {
-    #clock {
-        font-size: 30px;
-    }
 
-	#date{
-		font-size: 30px;
-	}
-
-	#weather{
-		font-size: 30px;
-	}
-	
-	#container {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		gap: 20px;
-	}
-
-	.utility-section {
-			width: calc(100% - 100px);
-		}
+ /* Responsive adjustments */
+ #clock, #date, #weather {
+	text-align: center;
+	margin-bottom: 20px;
 }
 
-/* Media query for larger screens */
-@media only screen and (min-width: 1200px) {
-    #clock {
-        font-size: 5rem;
-    }
-
-
-	#date{
-		font-size: 5rem;
+@media screen and (max-width: 600px) {
+	#clock, #date, #weather {
+		font-size: 18px;
 	}
+}
 
-	#weather{
-		font-size: 3rem;
+
+
+
+
+
+
+ /* Responsive adjustments */
+ #container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.utility-section {
+	flex: 1;
+	margin: 10px;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+@media screen and (max-width: 600px) {
+	.utility-section {
+		flex-basis: 100%;
 	}
 }
