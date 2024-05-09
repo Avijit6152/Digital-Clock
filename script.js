@@ -50,35 +50,49 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   
+// Fetch weather data from an API
+fetch('https://api.openweathermap.org/data/2.5/weather?q=Bangalore&appid=7a8cf79f1cb245fc4735b860e74fe450&units=metric')
+.then(response => response.json())
+.then(data => {
+    // Extract relevant weather information
+    const location = data.name;
+    const temperature = data.main.temp;
+    const description = data.weather[0].description;
+    //const location =data.main.location;
+    // Populate the weather div with the information
+    document.getElementById('weather').innerHTML = `Location: ${location} , Description: ${description} , Temperature: ${temperature}°C, `;
+})
+.catch(error => {
+    console.error('Error fetching weather data:', error);
+});
 
 
 
-
-  // Get current weather
-  navigator.geolocation.getCurrentPosition(function(position) {
-    var lat = 12.971599;
-    var lon = 77.594566;
-    var apiKey = '7a8cf79f1cb245fc4735b860e74fe450'; // Replace 'YOUR_API_KEY' with your OpenWeatherMap API key
-    var apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  
+//   navigator.geolocation.getCurrentPosition(function(position) {
+//     var lat = 12.971599;
+//     var lon = 77.594566;
+//     var apiKey = '7a8cf79f1cb245fc4735b860e74fe450'; 
+//     var apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
 	
 
-    fetch(apiUrl)
-      .then(response => response.json())
-      .then(data => {
-        var weatherDescription = data.weather[0].description;
-        var temperature = data.main.temp;
-        var weatherInfo = `Weather: ${weatherDescription}, Temperature: ${temperature}°C `;
-        document.getElementById('weather').innerHTML = weatherInfo;
-      })
-      .catch(error => {
-        console.error('Error fetching weather data:', error);
-        document.getElementById('weather').innerHTML = 'Unable to fetch weather data';
-      });
-  }, function(error) {
-    console.error('Error getting geolocation:', error);
-    document.getElementById('weather').innerHTML = 'Unable to determine location';
-  });
+//     fetch(apiUrl)
+//       .then(response => response.json())
+//       .then(data => {
+//         var weatherDescription = data.weather[0].description;
+//         var temperature = data.main.temp;
+//         var weatherInfo = `Weather: ${weatherDescription}, Temperature: ${temperature}°C `;
+//         document.getElementById('weather').innerHTML = weatherInfo;
+//       })
+//       .catch(error => {
+//         console.error('Error fetching weather data:', error);
+//         document.getElementById('weather').innerHTML = 'Unable to fetch weather data';
+//       });
+//   }, function(error) {
+//     console.error('Error getting geolocation:', error);
+//     document.getElementById('weather').innerHTML = 'Unable to determine location';
+//   });
 
 
 
