@@ -234,3 +234,30 @@ function updateTimer() {
 
     document.getElementById('timerDisplay').textContent = display;
 }
+
+
+
+function setAlarm() {
+    let alarmTime = document.getElementById('alarmTime').value;
+
+    // Get current time in milliseconds
+    let now = new Date().getTime();
+
+    // Parse alarm time and calculate difference in milliseconds
+    let alarmDateTime = new Date(`1970-01-01T${alarmTime}`).getTime();
+    
+    let timeUntilAlarm = alarmDateTime - now;
+
+    if (timeUntilAlarm > 0) {
+        // Set alarm to trigger at specified time
+        setTimeout(() => {
+            document.getElementById('alarmMessage').innerText = 'Alarm!';
+        }, timeUntilAlarm);
+    } else {
+        alert('Please select a future time for the alarm.');
+    }
+}
+
+ // Generate random background color
+ const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+ document.body.style.backgroundColor = randomColor;

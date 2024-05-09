@@ -1,5 +1,6 @@
 body {
-	background-color: rgb(44, 197, 189);
+	/* background-color: rgb(44, 197, 189); */
+	margin: 0;
 }
 
 
@@ -122,6 +123,16 @@ button:hover {
 	background-color: rgb(25, 0, 255);
 }
 
+#alarmMessage {
+	margin-top: 10px;
+	padding: 10px;
+	font-size: 20px;
+	text-align: center;
+	background-color: #f8f8f7;
+	color: #0e0d0d;
+	border-radius: 5px;
+	width: 300px;
+}
 
  
 @media screen and (max-width: 600px) {
