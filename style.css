@@ -129,8 +129,8 @@ button:hover {
 
 
 	#clock, #date, #weather {
-		font-size: 18px;
-		width: 100px;
+		font-size: 28px;
+		width: 480px;
 	    margin: 20px;
 	    text-align: center;
 	}
