@@ -127,10 +127,10 @@ button:hover {
 @media screen and (max-width: 600px) {
 
 
-	
+
 	#clock, #date, #weather {
 		font-size: 18px;
-		width: 900px;
+		width: 100px;
 	    margin: 20px;
 	    text-align: center;
 	}
