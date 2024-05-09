@@ -123,41 +123,36 @@ button:hover {
 }
 
 
- /* Responsive adjustments */
- #clock, #date, #weather {
-	text-align: center;
-	margin-bottom: 20px;
-}
-
+ 
 @media screen and (max-width: 600px) {
+
+
+	
 	#clock, #date, #weather {
 		font-size: 18px;
+		width: 900px;
+	    margin: 20px;
+	    text-align: center;
 	}
-}
 
 
+	#container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	
+	.utility-section {
+		flex: 1;
+		margin: 10px;
+		padding: 20px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+	}
 
-
-
-
-
- /* Responsive adjustments */
- #container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-.utility-section {
-	flex: 1;
-	margin: 10px;
-	padding: 20px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-}
-
-@media screen and (max-width: 600px) {
 	.utility-section {
 		flex-basis: 100%;
 	}
 }
+
+
