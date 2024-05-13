@@ -19,8 +19,7 @@ function showTime() {
 		am_pm = "AM";
 	}
 
-	hour =
-		hour < 10 ? "0" + hour : hour;
+	hour = hour < 10 ? "0" + hour : hour;
 	min = min < 10 ? "0" + min : min;
 	sec = sec < 10 ? "0" + sec : sec;
 
@@ -45,7 +44,7 @@ showTime();
 document.addEventListener('DOMContentLoaded', function() {
 	var currentDate = new Date();
 	var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-	var formattedDate = currentDate.toLocaleDateString('en-US', options);
+	var formattedDate = currentDate.toLocaleDateString('en-IN', options);
 	document.getElementById('date').innerHTML = formattedDate;
   });
 
@@ -77,64 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-// fetch('https://api.openweathermap.org/data/2.5/weather?q=Bangalore&appid=7a8cf79f1cb245fc4735b860e74fe450&units=metric')
-// .then(response => response.json())
-// .then(data => {
-
-//     const location = data.name;
-//     const temperature = data.main.temp;
-//     const description = data.weather[0].description;
-
-//     document.getElementById('weather').innerHTML = `Location: ${location} , Description: ${description} , Temperature: ${temperature}°C, `;
-// })
-// .catch(error => {
-//     console.error('Error fetching weather data:', error);
-// });
-
-
-
-  
-//   navigator.geolocation.getCurrentPosition(function(position) {
-//     var lat = 12.971599;
-//     var lon = 77.594566;
-//     var apiKey = '7a8cf79f1cb245fc4735b860e74fe450'; 
-//     var apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-
-	
-
-//     fetch(apiUrl)
-//       .then(response => response.json())
-//       .then(data => {
-//         var weatherDescription = data.weather[0].description;
-//         var temperature = data.main.temp;
-//         var weatherInfo = `Weather: ${weatherDescription}, Temperature: ${temperature}°C `;
-//         document.getElementById('weather').innerHTML = weatherInfo;
-//       })
-//       .catch(error => {
-//         console.error('Error fetching weather data:', error);
-//         document.getElementById('weather').innerHTML = 'Unable to fetch weather data';
-//       });
-//   }, function(error) {
-//     console.error('Error getting geolocation:', error);
-//     document.getElementById('weather').innerHTML = 'Unable to determine location';
-//   });
-
-
-
-
-
+//BMI Calculator
   function calculateBMI() {
     var weight = parseFloat(document.getElementById('weight').value);
     var height = parseFloat(document.getElementById('height').value);
@@ -236,7 +178,7 @@ function updateTimer() {
 }
 
 
-
+// Alarm
 function setAlarm() {
     let alarmTime = document.getElementById('alarmTime').value;
 
